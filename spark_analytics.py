@@ -34,8 +34,8 @@ events = df.selectExpr("CAST(value AS STRING)") \
     .withColumn("event_time", to_timestamp(col("timestamp")))
 
 # --- CONFIGURATION DU DATA LAKE (GCS) ---
-# Remplace 'ton-bucket-datalake' par le nom de ton bucket créé sur GCP
-bucket_name = "ton-bucket-datalake"
+# def  bucket créé sur GCP
+bucket_name = "tp-bigdata-datalake"
 checkpoint_path = f"gs://{bucket_name}/checkpoints/web_events"
 storage_path = f"gs://{bucket_name}/data/web_events"
 
@@ -48,7 +48,7 @@ query_storage = events.writeStream \
     .partitionBy("type") \
     .start()
 
-# 5. Affichage console (pour le debug en direct)
+# 5. Affichage console 
 query_console = events.writeStream \
     .outputMode("append") \
     .format("console") \
