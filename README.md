@@ -182,8 +182,8 @@ Les données arrivent dans notre Bucket GCS au format **Parquet**.
 
 ##  Résultat Final
 
-[Image d'un schéma simplifié montrant le flux : Site Web -> Kafka (IP Publique) -> Spark (IP Interne) -> GCS Parquet]
-img="img/mage.png"
+[Image d'un schéma simplifié montrant le flux : Site Web -> Kafka (IP Publique) -> Spark (IP Interne) -> GCS Parquet](img/pipe.png)
+
 
 Une fois que tout tourne :
 
