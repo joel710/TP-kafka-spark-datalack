@@ -1,5 +1,5 @@
 
-# 🚀 TP Big Data : Pipeline E-Commerce Temps Réel
+# TP Big Data : Pipeline E-Commerce Temps Réel
 
 > **De l'interaction utilisateur au Data Lake : Kafka, Spark & Google Cloud**
 
@@ -17,7 +17,7 @@ On a simulé un environnement de production en séparant bien les rôles :
 
 
 
-## 🛠️ 1. Infrastructure et Réseau (Le "Cerveau")
+##  1. Infrastructure et Réseau 
 
 C’est là qu’on a passé le plus de temps. On a utilisé **Google Cloud Platform (GCP)**.
 
@@ -44,7 +44,7 @@ C’est là qu’on a passé le plus de temps. On a utilisé **Google Cloud Plat
 
 
 
-## 📥 2. Couche d'Ingestion : Kafka
+##  2. Couche d'Ingestion : Kafka
 
 On a installé Kafka manuellement sur la VM.
 
@@ -64,7 +64,7 @@ bin/kafka-console-consumer.sh --topic web-events --bootstrap-server localhost:90
 
 
 
-## ⚡ 3. Couche de Traitement : PySpark
+##  3. Couche de Traitement : PySpark
 
 C'est le cœur du projet. Spark lit le flux Kafka en continu.
 
@@ -150,7 +150,7 @@ On définit un **schéma** pour transformer le JSON brut en tableau propre, puis
 
 
 
-## 🗄️ 4. Stockage Final : Data Lake (GCS)
+##  4. Stockage Final : Data Lake (GCS)
 
 Les données arrivent dans notre Bucket GCS au format **Parquet**.
 
@@ -164,7 +164,7 @@ Les données arrivent dans notre Bucket GCS au format **Parquet**.
 
 
 
-## ⚠️ Problèmes rencontrés & Solutions
+##  Problèmes rencontrés & Solutions
 
 | Problème | Ce qu'on a fait |
 | --- | --- |
@@ -180,9 +180,10 @@ Les données arrivent dans notre Bucket GCS au format **Parquet**.
 
 
 
-## 📊 Résultat Final
+##  Résultat Final
 
 [Image d'un schéma simplifié montrant le flux : Site Web -> Kafka (IP Publique) -> Spark (IP Interne) -> GCS Parquet]
+img="img/mage.png"
 
 Une fois que tout tourne :
 
