@@ -15,7 +15,7 @@ On a simulé un environnement de production en séparant bien les rôles :
 3. **Spark Dataproc** qui fait le calcul lourd (Processing).
 4. **Cloud Storage** qui sert de "Data Lake" (Stockage final).
 
----
+
 
 ## 🛠️ 1. Infrastructure et Réseau (Le "Cerveau")
 
@@ -42,7 +42,7 @@ C’est là qu’on a passé le plus de temps. On a utilisé **Google Cloud Plat
 
 
 
----
+
 
 ## 📥 2. Couche d'Ingestion : Kafka
 
@@ -62,7 +62,7 @@ bin/kafka-console-consumer.sh --topic web-events --bootstrap-server localhost:90
 
 ```
 
----
+
 
 ## ⚡ 3. Couche de Traitement : PySpark
 
@@ -148,7 +148,7 @@ spark.streams.awaitAnyTermination()
 ```
 On définit un **schéma** pour transformer le JSON brut en tableau propre, puis on écrit dans le Data Lake. 
 
----
+
 
 ## 🗄️ 4. Stockage Final : Data Lake (GCS)
 
@@ -162,7 +162,7 @@ Les données arrivent dans notre Bucket GCS au format **Parquet**.
 
 
 
----
+
 
 ## ⚠️ Problèmes rencontrés & Solutions
 
@@ -178,7 +178,7 @@ Les données arrivent dans notre Bucket GCS au format **Parquet**.
 
  |
 
----
+
 
 ## 📊 Résultat Final
 
@@ -191,7 +191,7 @@ Une fois que tout tourne :
 3. Spark récupère la ligne, l'analyse et l'écrit dans le Bucket.
 4. Dans Cloud Storage, un nouveau fichier `.parquet` apparaît !
 
----
+
 
 ## 👨‍💻 Comment relancer le projet ?
 
