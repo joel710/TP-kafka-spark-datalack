@@ -3,6 +3,7 @@
 
 > **De l'interaction utilisateur au Data Lake : Kafka, Spark & Google Cloud**
 
+lien du site emco: https://lumi-dun.vercel.app/
 ## 📝 Présentation du Projet
 
 L'objectif de ce projet était de mettre en place une architecture **End-to-End** capable de capturer les événements d'un site e-commerce (clics, ajouts au panier, vues de produits) et de les traiter en temps réel.
