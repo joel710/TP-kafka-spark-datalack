@@ -83,7 +83,7 @@ spark-submit \
 ```
 
 ### Le Code (Logique)
-'''python
+```python
   from pyspark.sql import SparkSession
 from pyspark.sql.functions import from_json, col, to_timestamp
 from pyspark.sql.types import StructType, StructField, StringType
@@ -144,7 +144,7 @@ print(f">>> Analyseur Spark actif. Stockage vers gs://{bucket_name}...")
 
 # Attente des deux flux
 spark.streams.awaitAnyTermination()
-'''
+```
 On définit un **schéma** pour transformer le JSON brut en tableau propre, puis on écrit dans le Data Lake. 
 
 ---
