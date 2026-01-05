@@ -1,0 +1,8 @@
+
+pyspark==3.3.0  # selon la version du cluster Dataproc
+pandas
+numpy
+
+# Connecteurs et utilitaires
+google-cloud-storage
+google-cloud-bigquery
